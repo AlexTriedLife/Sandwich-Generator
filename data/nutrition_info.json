@@ -1,0 +1,87 @@
+{
+    "veggies": [
+        {
+            "tomato": {
+                "ammount": "",
+                "calories": "",
+                "protein": "",
+                "sodium": "",
+                "fat": "",
+                "cholesterol": "",
+                "carbohydrates": ""
+            },
+            "lettuce": {
+                "ammount": "",
+                "calories": "",
+                "protein": "",
+                "sodium": "",
+                "fat": "",
+                "cholesterol": "",
+                "carbohydrates": ""
+            },
+            "onion": {
+                "ammount": "",
+                "calories": "",
+                "protein": "",
+                "sodium": "",
+                "fat": "",
+                "cholesterol": "",
+                "carbohydrates": ""
+            },
+            "peppers": {
+                "ammount": "",
+                "calories": "",
+                "protein": "",
+                "sodium": "",
+                "fat": "",
+                "cholesterol": "",
+                "carbohydrates": ""
+            },
+            "pickles": {
+                "ammount": "",
+                "calories": "",
+                "protein": "",
+                "sodium": "",
+                "fat": "",
+                "cholesterol": "",
+                "carbohydrates": ""
+            },
+            "cucumbers": {
+                "ammount": "",
+                "calories": "",
+                "protein": "",
+                "sodium": "",
+                "fat": "",
+                "cholesterol": "",
+                "carbohydrates": ""
+            },
+            "olives": {
+                "ammount": "",
+                "calories": "",
+                "protein": "",
+                "sodium": "",
+                "fat": "",
+                "cholesterol": "",
+                "carbohydrates": ""
+            },
+            "sprouts": {
+                "ammount": "",
+                "calories": "",
+                "protein": "",
+                "sodium": "",
+                "fat": "",
+                "cholesterol": "",
+                "carbohydrates": ""
+            },
+            "avocado": {
+                "ammount": "",
+                "calories": "",
+                "protein": "",
+                "sodium": "",
+                "fat": "",
+                "cholesterol": "",
+                "carbohydrates": ""
+            }
+        }
+    ]
+}
