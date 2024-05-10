@@ -1,86 +1,401 @@
 {
+    "breads": [
+        {
+            "gluten-free": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "multigrain": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "rye": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "sourdough": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "white": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "whole-wheat": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            }
+        }
+    ],
     "veggies": [
         {
-            "tomato": {
-                "ammount": "",
+            "avocado": {
+                "amount": "",
                 "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
                 "protein": "",
                 "sodium": "",
-                "fat": "",
-                "cholesterol": "",
-                "carbohydrates": ""
-            },
-            "lettuce": {
-                "ammount": "",
-                "calories": "",
-                "protein": "",
-                "sodium": "",
-                "fat": "",
-                "cholesterol": "",
-                "carbohydrates": ""
-            },
-            "onion": {
-                "ammount": "",
-                "calories": "",
-                "protein": "",
-                "sodium": "",
-                "fat": "",
-                "cholesterol": "",
-                "carbohydrates": ""
-            },
-            "peppers": {
-                "ammount": "",
-                "calories": "",
-                "protein": "",
-                "sodium": "",
-                "fat": "",
-                "cholesterol": "",
-                "carbohydrates": ""
-            },
-            "pickles": {
-                "ammount": "",
-                "calories": "",
-                "protein": "",
-                "sodium": "",
-                "fat": "",
-                "cholesterol": "",
-                "carbohydrates": ""
+                "price": ""
             },
             "cucumbers": {
-                "ammount": "",
+                "amount": "",
                 "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
                 "protein": "",
                 "sodium": "",
-                "fat": "",
+                "price": ""
+            },
+            "lettuce": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
                 "cholesterol": "",
-                "carbohydrates": ""
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
             },
             "olives": {
-                "ammount": "",
+                "amount": "",
                 "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
                 "protein": "",
                 "sodium": "",
-                "fat": "",
+                "price": ""
+            },
+            "onion": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
                 "cholesterol": "",
-                "carbohydrates": ""
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "peppers": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "pickles": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
             },
             "sprouts": {
-                "ammount": "",
+                "amount": "",
                 "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
                 "protein": "",
                 "sodium": "",
-                "fat": "",
-                "cholesterol": "",
-                "carbohydrates": ""
+                "price": ""
             },
-            "avocado": {
-                "ammount": "",
+            "tomato": {
+                "amount": "",
                 "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
                 "protein": "",
                 "sodium": "",
-                "fat": "",
+                "price": ""
+            }
+        }
+    ],
+    "meats": [
+        {
+            "bacon": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
                 "cholesterol": "",
-                "carbohydrates": ""
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "balogna": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "chicken": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "ham": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "roast-beef": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "salami": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "tuna": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "turkey": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            }
+        }
+    ],
+    "cheeses": [
+        {
+            "cheddar": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "mozzarella": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "cream-cheese": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "swiss": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "havarti": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "montery-jack": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            }
+        }
+    ],
+    "sauces": [
+        {
+            "bbq": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "garlic-mayo": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "honey-mustard": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "ketchup": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "mayo": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "mustard": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "peanut-butter": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "relish": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
+            },
+            "tahini": {
+                "amount": "",
+                "calories": "",
+                "carbohydrates": "",
+                "cholesterol": "",
+                "fat": "",
+                "protein": "",
+                "sodium": "",
+                "price": ""
             }
         }
     ]
