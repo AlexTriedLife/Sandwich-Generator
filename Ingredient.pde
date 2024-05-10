@@ -1,3 +1,6 @@
+// Import the set class from java
+import java.util.Set; 
+
 class Ingredient {
   // The type of the ingredient i.e lettuce, ham, cheddar and amount of
   public String type, servingSize;
@@ -15,27 +18,27 @@ class Ingredient {
     //this.price = pr;
   }
    //  Extract the nutritional info of the ingredient type
-  void getNutritionalInfo(String ingredientType) {
+  void getNutritionalInfo(String ingredient, String ingredientType) {
     // To be set to the array coresponding with the ingredientType
     JSONArray nutrition_info = null;
     // Check the ingredient type
-    if (ingredientType.equals("bread")) {
+    if (ingredient.equals("bread")) {
       // Assign nutrion_info to the jBreads JSONArray
       nutrition_info = jBreads;
-    } else if (ingredientType.equals("veggies")) {
+    } else if (ingredient.equals("veggies")) {
 
       nutrition_info = jVeggies;
-    } else if (ingredientType.equals("meat")) {
+    } else if (ingredient.equals("meat")) {
 
       nutrition_info = jMeats;
-    } else if (ingredientType.equals("cheese")) {
+    } else if (ingredient.equals("cheese")) {
 
       nutrition_info = jCheeses;
-    } else if (ingredientType == "sauce") {
+    } else if (ingredient.equals("sauce")) {
 
       nutrition_info = jSauces;
     } else {
-      println("Error: " + ingredientType + ": is not an ingredient type");
+      println("Error: " + ingredient + ": is not an ingredient type");
     }
 
 
@@ -44,19 +47,19 @@ class Ingredient {
     for (int i = 0; i < nutrition_info.size(); i++) {
       // Get the JSONObject at i.
       JSONObject jIngredient = nutrition_info.getJSONObject(i);
-      // To check strings use an array of the keys from the JSONObject 
-      String typeString = jIngredient.getString(i);
-
-      // If typeString is equal to the parameter <ingredientType> populate the fields
-
-      if (typeString.equals(ingredientType)) {
-        servingSize = jIngredient.getString("amount");
-        numCal = jIngredient.getFloat("calories");
-        numCarb = jIngredient.getFloat("carbohydrates");
-        numCholesterol = jIngredient.getFloat("cholesterol");
-        numFat = jIngredient.getFloat("fat");
-        numProtein = jIngredient.getFloat("protein");
-        numSodium = jIngredient.getFloat("sodium");
+      // To check strings use the keys from the JSONObject 
+      Set<String> typeString = jIngredient.keys();
+    
+      if (typeString.contains(ingredientType)) {
+        // get the JSONObject of the parameter ingredientType
+        JSONObject jIngredientType = jIngredient.getJSONObject(ingredientType);
+        servingSize = jIngredientType.getString("amount");
+        numCal = jIngredientType.getFloat("calories");
+        numCarb = jIngredientType.getFloat("carbohydrates");
+        numCholesterol = jIngredientType.getFloat("cholesterol");
+        numFat = jIngredientType.getFloat("fat");
+        numProtein = jIngredientType.getFloat("protein");
+        numSodium = jIngredientType.getFloat("sodium");
       } else {
         println("Error! Ingredient " + ingredientType + " does not exist");
       }
