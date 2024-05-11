@@ -31,11 +31,11 @@ synchronized public void gui_window_draw(PApplet appc, GWinData data) {
 }
 
 public void b_bread_click(GButton source, GEvent event) {
-  for (int i = 0; i < breadOpts.length; i++)  {
-    breadOpts[i].setVisible(true);
-  
-  }
-  
+  makeOptionVisible("bread");
+  makeOptionNotVisible("meat");
+  makeOptionNotVisible("veg");
+  makeOptionNotVisible("cheese");
+  makeOptionNotVisible("sauce");
 }
 public void b_meat_click(GButton source, GEvent event) {
 }
@@ -64,12 +64,12 @@ public void createGUI2() {
   b_bread.setOpaque(true);
 
   b_bread.addEventHandler(this, "b_bread_click");
-  
+
   b_meat = new GButton(gui_window, 75, 270, 60, 20);
   b_meat.setText("Meat");
   b_meat.setOpaque(true);
   b_meat.addEventHandler(this, "b_meat_click");
-  
+
 
   b_veg = new GButton(gui_window, 150, 270, 60, 20);
   b_veg.setText("Veggie");
@@ -81,83 +81,55 @@ public void createGUI2() {
   b_cheese.setOpaque(true);
 
   b_cheese.addEventHandler(this, "b_cheese_click");
-  
+
   b_sauce = new GButton(gui_window, 300, 270, 60, 20);
   b_sauce.setText("Sauce");
   b_sauce.setOpaque(true);
   b_sauce.addEventHandler(this, "b_sauce_click");
 }
 
-void makeOptionNotVisible(String option)  {
+void makeOptionNotVisible(String option) {
   GCheckbox[] optionArray = null;
-  
-  if  (option.equals("bread"))  {
+
+  if  (option.equals("bread")) {
     optionArray = breadOpts;
-  }
-
-  else if (option.equals("meat")) {
+  } else if (option.equals("meat")) {
     optionArray = meatOpts;
-    
-  }
-
-  else if (option.equals("veg")) {
+  } else if (option.equals("veg")) {
     optionArray = vegOpts;
-    
-  } 
-
-  else if (option.equals("cheese")) {
+  } else if (option.equals("cheese")) {
     optionArray = cheeseOpts;
-    
-  }
-
-  else if (option.equals("sauce")) {
+  } else if (option.equals("sauce")) {
     optionArray = sauceOpts;
-    
-  }
-
-  else  {
+  } else {
     return;
   }
 
   for (int i = 0; i < optionArray.length; i++) {
     optionArray[i].setVisible(false);
-    
+    println(optionArray[i].isVisible());
   }
 }
-  
-void makeOptionVisible(String option)  {
+
+void makeOptionVisible(String option) {
   GCheckbox[] optionArray = null;
-  
-  if  (option.equals("bread"))  {
+
+  if  (option.equals("bread")) {
     optionArray = breadOpts;
-  }
-
-  else if (option.equals("meat")) {
+  } else if (option.equals("meat")) {
     optionArray = meatOpts;
-    
-  }
-
-  else if (option.equals("veg")) {
+  } else if (option.equals("veg")) {
     optionArray = vegOpts;
-    
-  } 
-
-  else if (option.equals("cheese")) {
+  } else if (option.equals("cheese")) {
     optionArray = cheeseOpts;
-    
-  }
-
-  else if (option.equals("sauce")) {
+  } else if (option.equals("sauce")) {
     optionArray = sauceOpts;
-    
-  }
-
-  else  {
+  } else {
     return;
   }
 
   for (int i = 0; i < optionArray.length; i++) {
     optionArray[i].setVisible(true);
-    
+    println(optionArray[i].isVisible());
   }
 }
