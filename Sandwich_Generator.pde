@@ -1,3 +1,5 @@
+import g4p_controls.*;
+
  
 //  j insignifies json
 public JSONObject jNutritionalInfo;
@@ -19,9 +21,10 @@ void setup()    {
     jSauces = jNutritionalInfo.getJSONArray("sauces");
     bread = new Ingredient("bread");
     bread.getNutritionalInfo("bread","gluten-free");
-    println(bread.numCal);
+    println(bread.numCholesterol);
                          
-    size(800,800);
+    size(800,800);  
+    createGUI2();
 }
 
 void draw()     {
