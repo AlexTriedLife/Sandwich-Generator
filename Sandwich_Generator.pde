@@ -18,7 +18,7 @@ void setup()    {
     jCheeses = jNutritionalInfo.getJSONArray("cheeses"); 
     jSauces = jNutritionalInfo.getJSONArray("sauces");
     bread = new Ingredient("bread");
-    bread.getNutritionalInfo("bread");
+    bread.getNutritionalInfo("bread","gluten-free");
     println(bread.numCal);
                          
     size(800,800);

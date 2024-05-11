@@ -38,8 +38,11 @@ class Ingredient {
 
       nutrition_info = jSauces;
     } else {
+
       println("Error: " + ingredient + ": is not an ingredient type");
-    }
+      // Exits the method
+      return;
+  }
 
 
     // Search for the ingredientType in the JSONArray
@@ -60,6 +63,8 @@ class Ingredient {
         numFat = jIngredientType.getFloat("fat");
         numProtein = jIngredientType.getFloat("protein");
         numSodium = jIngredientType.getFloat("sodium");
+        // Exits the method
+        return;
       } else {
         println("Error! Ingredient " + ingredientType + " does not exist");
       }
