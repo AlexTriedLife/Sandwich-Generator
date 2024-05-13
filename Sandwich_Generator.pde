@@ -25,6 +25,7 @@ void setup()    {
                          
     size(800,800);  
     createGUI2();
+    print(breadOpts.length);
 }
 
 void draw()     {
