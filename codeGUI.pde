@@ -1,6 +1,6 @@
 //  Variable
 //  GUI window
-GWindow gui_window;
+GWindow gui_window, bread_window, meat_window, veg_window, cheese_window, sauce_window;
 //  Buttons
 GButton b_bread;
 GButton b_meat;  //  Switch to meat selection
@@ -29,6 +29,21 @@ GCheckbox[] sauceOpts;
 synchronized public void gui_window_draw(PApplet appc, GWinData data) {
   //appc.background(230);
 }
+synchronized public void bread_window_draw(PApplet appc, GWinData data) {
+  //appc.background(230);
+}
+synchronized public void meat_window_draw(PApplet appc, GWinData data) {
+  //appc.background(230);
+}
+synchronized public void veg_window_draw(PApplet appc, GWinData data) {
+  //appc.background(230);
+}
+synchronized public void cheese_window_draw(PApplet appc, GWinData data) {
+  //appc.background(230);
+}
+synchronized public void sauce_window_draw(PApplet appc, GWinData data) {
+  //appc.background(230);
+}
 
 public void b_bread_click(GButton source, GEvent event) {
   println("Bread button clicked"); // Check if clicked
@@ -55,12 +70,30 @@ public void createGUI2() {
   G4P.setGlobalColorScheme(GCScheme.BLUE_SCHEME);
   G4P.setMouseOverEnabled(false);
   surface.setTitle("GUI Window");
-  // Init gui_window
+  // Windows
   gui_window = GWindow.getWindow(this, "GUI Window", 0, 0, 600, 600, JAVA2D);
-
   gui_window.setActionOnClose(G4P.KEEP_OPEN);
   gui_window.addDrawHandler(this, "gui_window_draw");
 
+  bread_window = GWindow.getWindow(this, "Bread", 0, 700, 450, 300, JAVA2D);
+  bread_window.setActionOnClose(G4P.CLOSE);
+  bread_window.setVisible(false);
+
+  meat_window = GWindow.getWindow(this, "Meat", 0, 700, 450, 300, JAVA2D);
+  meat_window.setActionOnClose(G4P.CLOSE);
+  meat_window.setVisible(false);
+
+  veg_window = GWindow.getWindow(this, "Veg", 0, 700, 450, 300, JAVA2D);
+  veg_window.setActionOnClose(G4P.CLOSE);
+  veg_window.setVisible(false);
+
+  cheese_window = GWindow.getWindow(this, "Cheese", 0, 700, 450, 300, JAVA2D);
+  cheese_window.setActionOnClose(G4P.CLOSE);
+  cheese_window.setVisible(false);
+
+  sauce_window = GWindow.getWindow(this, "Sauce", 0, 700, 450, 300, JAVA2D);
+  sauce_window.setActionOnClose(G4P.CLOSE);
+  sauce_window.setVisible(false);
   // Button init
   b_bread = new GButton(gui_window, 0, 270, 60, 20);
   b_bread.setText("Bread");
@@ -93,75 +126,77 @@ public void createGUI2() {
   // Checkboxes
 
   // Bread
-  white = new GCheckbox(gui_window, 25, 350, 90, 20);
+  white = new GCheckbox(bread_window, 25, 200, 90, 20);
   white.setText("White");
-  white.setVisible(false);
+  white.setVisible(true);
 
-  whole_wheat = new GCheckbox(gui_window, 75, 350, 90, 20);
+  whole_wheat = new GCheckbox(bread_window, 75, 200, 90, 20);
   whole_wheat.setText("Whole-Wheat");
-  whole_wheat.setVisible(false);
+  whole_wheat.setVisible(true);
 
-  multigrain = new GCheckbox(gui_window, 125, 350, 90, 20);
+  multigrain = new GCheckbox(bread_window, 125, 200, 90, 20);
   multigrain.setText("Multigrain");
-  multigrain.setVisible(false);
+  multigrain.setVisible(true);
 
-  rye = new GCheckbox(gui_window, 25, 400, 90, 20);
+  rye = new GCheckbox(bread_window, 25, 250, 90, 20);
   rye.setText("Rye");
-  rye.setVisible(false);
+  rye.setVisible(true);
 
-  sourdough = new GCheckbox(gui_window, 75, 400, 90, 20);
+  sourdough = new GCheckbox(bread_window, 75, 250, 90, 20);
   sourdough.setText("Sourdough");
-  sourdough.setVisible(false);
+  sourdough.setVisible(true);
 
-  gluten_free = new GCheckbox(gui_window, 125, 400, 90, 20);
+  gluten_free = new GCheckbox(bread_window, 125, 250, 90, 20);
   gluten_free.setText("Gluten-Free");
-  gluten_free.setVisible(false);
+  gluten_free.setVisible(true);
 
   // Meat
-  turkey = new GCheckbox(gui_window, 25, 350, 90, 20);
+  turkey = new GCheckbox(meat_window, 25, 200, 90, 20);
   turkey.setText("Turkey");
-  turkey.setVisible(false);
+  turkey.setVisible(true);
 
-  ham = new GCheckbox(gui_window, 75, 350, 90, 20);
+  ham = new GCheckbox(meat_window, 75, 200, 90, 20);
   ham.setText("Ham");
-  ham.setVisible(false);
+  ham.setVisible(true);
 
-  roast_beef = new GCheckbox(gui_window, 125, 350, 90, 20);
+
+  roast_beef = new GCheckbox(meat_window, 125, 200, 90, 20);
   roast_beef.setText("Roast Beef");
-  roast_beef.setVisible(false);
+  roast_beef.setVisible(true);
 
-  balogna = new GCheckbox(gui_window, 25, 400, 90, 20);
+  balogna = new GCheckbox(meat_window, 25, 250, 90, 20);
   balogna.setText("Balogna");
-  balogna.setVisible(false);
+  balogna.setVisible(true);
 
-  chicken = new GCheckbox(gui_window, 75, 400, 90, 20);
+  chicken = new GCheckbox(meat_window, 75, 250, 90, 20);
   chicken.setText("Chicken");
-  chicken.setVisible(false);
+  chicken.setVisible(true);
 
-  bacon = new GCheckbox(gui_window, 125, 400, 90, 20);
+  bacon = new GCheckbox(meat_window, 125, 250, 90, 20);
   bacon.setText("Bacon");
-  bacon.setVisible(false);
+  bacon.setVisible(true);
 
-  salami = new GCheckbox(gui_window, 25, 450, 90, 20);
+  salami = new GCheckbox(meat_window, 25, 300, 90, 20);
   salami.setText("Salami");
-  salami.setVisible(false);
+  salami.setVisible(true);
 
-  tuna = new GCheckbox(gui_window, 75, 450, 90, 20);
+  tuna = new GCheckbox(meat_window, 75, 300, 90, 20);
   tuna.setText("Tuna");
-  tuna.setVisible(false);
+  tuna.setVisible(true);
 
   //// Veggies
-  //white = new GCheckbox(gui_window, 125, 450, 90, 20);
-  //white.setText("White");
-  //white.setVisible(false);
+  avocado = new GCheckbox(veg_window, 25, 200, 90, 20);
+  avocado.setText("Avocado");
+  avocado.setVisible(true);
 
-  //whole_wheat = new GCheckbox(gui_window, 75, 350, 90, 20);
-  //whole_wheat.setText("Whole-Wheat");
-  //whole_wheat.setVisible(false);
+  cucumbers = new GCheckbox(veg_window, 75, 200, 90, 20);
+  cucumbers.setText("Cucumber");
+  cucumbers.setVisible(true);
 
-  //multigrain = new GCheckbox(gui_window, 125, 350, 90, 20);
-  //multigrain.setText("Multigrain");
-  //multigrain.setVisible(false);
+
+  lettuce = new GCheckbox(veg_window, 125, 350, 90, 20);
+  lettuce.setText("Lettuce");
+  lettuce.setVisible(false);
 
   //rye = new GCheckbox(gui_window, 25, 400, 90, 20);
   //rye.setText("Rye");
@@ -240,54 +275,30 @@ public void createGUI2() {
 
 void makeCheckboxesNotVisible() {
   // Go through each checkbox and make it not visible
-  println("called");
-  for (GCheckbox checkbox : breadOpts) {
-    checkbox.setVisible(false);
-    println("setting " + checkbox.getText() + " invisible" );
-  }
-  for (GCheckbox checkbox : meatOpts) {
-    checkbox.setVisible(false);
-    println("setting " + checkbox.getText() + " invisible" );
-    
-  }
-  //for (GCheckbox checkbox : vegOpts) {
-  //  checkbox.setVisible(false);
-  //}
-  //for (GCheckbox checkbox : cheeseOpts) {
-  //  checkbox.setVisible(false);
-  //}
-  //for (GCheckbox checkbox : sauceOpts) {
-  //  checkbox.setVisible(false);
-  //}
-  
-  gui_window.redraw();
+  println("called makeCheckboxesNotVisible");
+
+  bread_window.setVisible(false);
+  meat_window.setVisible(false);
+  veg_window.setVisible(false);
+  cheese_window.setVisible(false);
+  sauce_window.setVisible(false);
 }
 void makeOptionVisible(String option) {
   // Hide all checkboxes
   makeCheckboxesNotVisible();
 
-  GCheckbox[] optionArray = null;
-
   if  (option.equals("bread")) {
-    optionArray = breadOpts;
+    bread_window.setVisible(true);
   } else if (option.equals("meat")) {
-    optionArray = meatOpts;
+    meat_window.setVisible(true);
   } else if (option.equals("veg")) {
-    optionArray = vegOpts;
+    veg_window.setVisible(true);
   } else if (option.equals("cheese")) {
-    optionArray = cheeseOpts;
+    cheese_window.setVisible(true);
   } else if (option.equals("sauce")) {
-    optionArray = sauceOpts;
+    sauce_window.setVisible(true);
   } else {
+    // exit method
     return;
   }
-
-  // Enable checkboxes for the selected category
-  for (GCheckbox checkbox : optionArray) {
-    checkbox.setVisible(true);
-    println("setting " + checkbox.getText() + " visible" );
-   
-  }
-  println("should be after");
-  gui_window.redraw();
 }

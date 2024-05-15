@@ -8,14 +8,10 @@ class Ingredient {
   //  nutritional information
   float numCal, numProtein, numSodium, numFat, numCholesterol, numCarb, price;
 
-  Ingredient(String t) {
+  // Paramaters are t = ingredient type i.e bread and o = ingredient option i.e multigrain 
+  Ingredient(String t, String o) {
     this.type = t;
-    //this.numProtein = p;
-    //this.numSodium = s;
-    //this.numFat = f;
-    //this.numCholesterol = ch;
-    //this.numCarb = ca;
-    //this.price = pr;
+    this.getNutritionalInfo(t,o);
   }
    //  Extract the nutritional info of the ingredient type
   void getNutritionalInfo(String ingredient, String ingredientType) {

@@ -9,21 +9,22 @@ public JSONArray jMeats = new JSONArray();
 public JSONArray jCheeses = new JSONArray();
 public JSONArray jSauces = new JSONArray();
 
-Ingredient bread;
+Ingredient salamii;
 
 
 void setup()    {
+    // Init JSONObject
     jNutritionalInfo = loadJSONObject("nutrition_info.json");
     jBreads = jNutritionalInfo.getJSONArray("breads");
     jVeggies = jNutritionalInfo.getJSONArray("veggies");
     jMeats = jNutritionalInfo.getJSONArray("meats");
     jCheeses = jNutritionalInfo.getJSONArray("cheeses"); 
     jSauces = jNutritionalInfo.getJSONArray("sauces");
-    bread = new Ingredient("bread");
-    bread.getNutritionalInfo("bread","gluten-free");
-    println(bread.numCholesterol);
+    salamii = new Ingredient("meat","salami");
+    println(salamii.numCholesterol);
                          
     size(800,800);  
+    createGUI();
     createGUI2();
     print(breadOpts.length);
 }
