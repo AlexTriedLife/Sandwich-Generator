@@ -23,7 +23,11 @@ GCheckbox[] meatOpts;
 GCheckbox[] vegOpts;
 GCheckbox[] cheeseOpts;
 GCheckbox[] sauceOpts;
-GCheckbox[][] allOpts;
+//  2-D array of all checkboxes
+GCheckbox[][] allCheckOpts;
+
+
+
 //  GUI methods
 
 synchronized public void gui_window_draw(PApplet appc, GWinData data) {
@@ -49,6 +53,9 @@ public void b_bread_click(GButton source, GEvent event) {
   println("Bread button clicked"); // Check if clicked
   makeOptionVisible("bread");
 
+  //makeOptionNotVisible("veg");
+  //makeOptionNotVisible("cheese");
+  //makeOptionNotVisible("sauce");
 }
 public void b_meat_click(GButton source, GEvent event){
   makeOptionVisible("meat");
@@ -144,203 +151,152 @@ public void createGUI2() {
   // Checkboxes
 
   // Bread
-  c_white = new GCheckbox(bread_window, 25, 75, 90, 40);
-  c_white.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_white = new GCheckbox(bread_window, 25, 75, 90, 20);
   c_white.setText("White");
   c_white.setVisible(true);
 
-  c_whole_wheat = new GCheckbox(bread_window, 150, 75, 90, 40);
-  c_whole_wheat.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_whole_wheat = new GCheckbox(bread_window, 75, 75, 90, 20);
   c_whole_wheat.setText("Whole-Wheat");
   c_whole_wheat.setVisible(true);
 
-  c_multigrain = new GCheckbox(bread_window, 275, 75, 90, 40);
-  c_multigrain.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_multigrain = new GCheckbox(bread_window, 125, 75, 90, 20);
   c_multigrain.setText("Multigrain");
   c_multigrain.setVisible(true);
 
-  c_rye = new GCheckbox(bread_window, 25, 150, 90, 40);
-  c_rye.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_rye = new GCheckbox(bread_window, 25, 150, 90, 20);
   c_rye.setText("Rye");
   c_rye.setVisible(true);
 
-  c_sourdough = new GCheckbox(bread_window, 150, 150, 90, 40);
-  c_sourdough.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_sourdough = new GCheckbox(bread_window, 75, 150, 90, 20);
   c_sourdough.setText("Sourdough");
   c_sourdough.setVisible(true);
 
-  c_gluten_free = new GCheckbox(bread_window, 275, 150, 90, 40);
-  c_gluten_free.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_gluten_free = new GCheckbox(bread_window, 125, 150, 90, 20);
   c_gluten_free.setText("Gluten-Free");
   c_gluten_free.setVisible(true);
 
   // Meat
-  c_turkey = new GCheckbox(meat_window, 25, 75, 90, 40);
-  c_turkey.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_turkey = new GCheckbox(meat_window, 25, 200, 90, 20);
   c_turkey.setText("Turkey");
   c_turkey.setVisible(true);
 
-  c_ham = new GCheckbox(meat_window, 150, 75, 90, 40);
-  c_ham.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_ham = new GCheckbox(meat_window, 75, 200, 90, 20);
   c_ham.setText("Ham");
   c_ham.setVisible(true);
 
 
-  c_roast_beef = new GCheckbox(meat_window, 275, 75, 90, 40);
-  c_roast_beef.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_roast_beef = new GCheckbox(meat_window, 125, 200, 90, 20);
   c_roast_beef.setText("Roast Beef");
   c_roast_beef.setVisible(true);
 
-  c_balogna = new GCheckbox(meat_window, 25, 150, 90, 40);
-  c_balogna.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_balogna = new GCheckbox(meat_window, 25, 250, 90, 20);
   c_balogna.setText("Balogna");
   c_balogna.setVisible(true);
 
-  c_chicken = new GCheckbox(meat_window, 150, 150, 90, 40);
-  c_chicken.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_chicken = new GCheckbox(meat_window, 75, 250, 90, 20);
   c_chicken.setText("Chicken");
   c_chicken.setVisible(true);
 
-  c_bacon = new GCheckbox(meat_window, 275, 150, 90, 40);
-  c_bacon.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_bacon = new GCheckbox(meat_window, 125, 250, 90, 20);
   c_bacon.setText("Bacon");
   c_bacon.setVisible(true);
 
-  c_salami = new GCheckbox(meat_window, 25, 225, 90, 40);
-  c_salami.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_salami = new GCheckbox(meat_window, 25, 300, 90, 20);
   c_salami.setText("Salami");
   c_salami.setVisible(true);
 
-  c_tuna = new GCheckbox(meat_window, 150, 225, 90, 40);
-  c_tuna.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_tuna = new GCheckbox(meat_window, 75, 300, 90, 20);
   c_tuna.setText("Tuna");
   c_tuna.setVisible(true);
 
   //// Veggies
-  c_avocado = new GCheckbox(veg_window, 25, 75, 90, 40);
-  c_avocado.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_avocado = new GCheckbox(veg_window, 25, 200, 90, 20);
   c_avocado.setText("Avocado");
   c_avocado.setVisible(true);
 
-  c_cucumbers = new GCheckbox(veg_window, 150, 75, 90, 40);
-  c_cucumbers.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_cucumbers = new GCheckbox(veg_window, 75, 200, 90, 20);
   c_cucumbers.setText("Cucumber");
   c_cucumbers.setVisible(true);
 
 
-  c_lettuce = new GCheckbox(veg_window, 275, 75, 90, 40);
-  c_lettuce.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_lettuce = new GCheckbox(veg_window, 125, 200, 90, 20);
   c_lettuce.setText("Lettuce");
-  c_lettuce.setVisible(true);
+  c_lettuce.setVisible(false);
 
-  c_olives = new GCheckbox(veg_window, 25, 150, 90, 40);
-  c_olives.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_olives = new GCheckbox(veg_window, 25, 350, 90, 20);
   c_olives.setText("Olives");
-  c_olives.setVisible(true);
+  c_olives.setVisible(false);
 
-  c_onion = new GCheckbox(veg_window, 150, 150, 90, 40);
-  c_onion.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_onion = new GCheckbox(veg_window, 75, 350, 90, 20);
   c_onion.setText("Onion");
-  c_onion.setVisible(true);
+  c_onion.setVisible(false);
 
-  c_peppers = new GCheckbox(veg_window, 275, 150, 90, 40);
-  c_peppers.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_peppers = new GCheckbox(veg_window, 125, 350, 90, 20);
   c_peppers.setText("Peppers");
-  c_peppers.setVisible(true);
+  c_peppers.setVisible(false);
 
-  c_pickles = new GCheckbox(veg_window, 25, 225, 90, 40);
-  c_pickles.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_pickles = new GCheckbox(veg_window, 25, 400, 90, 20);
   c_pickles.setText("Pickles");
-  c_pickles.setVisible(true);
+  c_pickles.setVisible(false);
 
-  c_sprouts = new GCheckbox(veg_window, 150, 225, 90, 40);
-  c_sprouts.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_sprouts = new GCheckbox(veg_window, 75, 400, 90, 20);
   c_sprouts.setText("Sprouts");
-  c_sprouts.setVisible(true);
+  c_sprouts.setVisible(false);
  
-  c_tomato = new GCheckbox(veg_window, 275, 225, 90, 40);
-  c_tomato.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_tomato = new GCheckbox(veg_window, 125, 400, 90, 20);
   c_tomato.setText("Tomato");
-  c_tomato.setVisible(true);
+  c_tomato.setVisible(false);
   // Cheese
-  c_cheddar = new GCheckbox(cheese_window, 25, 75, 90, 40);
-  c_cheddar.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_cheddar = new GCheckbox(cheese_window, 25, 350, 90, 20);
   c_cheddar.setText("Cheddar");
-  c_cheddar.setVisible(true);
+  c_cheddar.setVisible(false);
 
-  c_cream_cheese = new GCheckbox(cheese_window, 150, 75, 90, 40);
-  c_cream_cheese.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_cream_cheese = new GCheckbox(cheese_window, 75, 350, 90, 20);
   c_cream_cheese.setText("Cream-Cheese");
-  c_cream_cheese.setVisible(true);
+  c_cream_cheese.setVisible(false);
 
-  c_havarti  = new GCheckbox(cheese_window, 275, 75, 90, 40);
-  c_havarti.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_havarti  = new GCheckbox(cheese_window, 125, 350, 90, 20);
   c_havarti.setText("Havarti");
-  c_havarti.setVisible(true);
+  c_havarti.setVisible(false);
 
-  c_monterey_jack = new GCheckbox(cheese_window, 25, 150, 90, 40);
-  c_monterey_jack.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_monterey_jack = new GCheckbox(cheese_window, 25, 400, 90, 20);
   c_monterey_jack.setText("Montery-Jack");
-  c_monterey_jack.setVisible(true);
+  c_monterey_jack.setVisible(false);
 
-  c_mozzarella = new GCheckbox(cheese_window, 150, 150, 90, 40);
-  c_mozzarella.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
+  c_mozzarella = new GCheckbox(cheese_window, 75, 400, 90, 20);
   c_mozzarella.setText("Mozzarella");
-  c_mozzarella.setVisible(true);
+  c_mozzarella.setVisible(false);
 
-  c_swiss = new GCheckbox(cheese_window, 275, 150, 90, 40);
-  c_swiss.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
-  c_swiss.setText("Swiss");
-  c_swiss.setVisible(true);
+  //gluten_free = new GCheckbox(gui_window, 125, 400, 90, 20);
+  //gluten_free.setText("Gluten-Free");
+  //gluten_free.setVisible(false);
 
-  // Sauce
-  c_bbq = new GCheckbox(sauce_window, 25, 75, 90, 40);
-  c_bbq.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
-  c_bbq.setText("BBQ");
-  c_bbq.setVisible(true);
+  //// Sauce
+  //white = new GCheckbox(gui_window, 25, 350, 90, 20);
+  //white.setText("White");
+  //white.setVisible(false);
 
-  c_garlic_mayo = new GCheckbox(sauce_window, 150, 75, 90, 40);
-  c_garlic_mayo.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
-  c_garlic_mayo.setText("Garlic Mayo");
-  c_garlic_mayo.setVisible(true);
+  //whole_wheat = new GCheckbox(gui_window, 75, 350, 90, 20);
+  //whole_wheat.setText("Whole-Wheat");
+  //whole_wheat.setVisible(false);
 
-  c_honey_mustard = new GCheckbox(sauce_window, 275, 75, 90, 40);
-  c_honey_mustard.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
-  c_honey_mustard.setText("Honey Mustard");
-  c_honey_mustard.setVisible(true);
+  //multigrain = new GCheckbox(gui_window, 125, 350, 90, 20);
+  //multigrain.setText("Multigrain");
+  //multigrain.setVisible(false);
 
-  c_ketchup = new GCheckbox(sauce_window, 25, 150, 90, 40);
-  c_ketchup.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
-  c_ketchup.setText("Ketchup");
-  c_ketchup.setVisible(true);
+  //rye = new GCheckbox(gui_window, 25, 400, 90, 20);
+  //rye.setText("Rye");
+  //rye.setVisible(false);
 
-  c_mayo = new GCheckbox(sauce_window, 150, 150, 90, 40);
-  c_mayo.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
-  c_mayo.setText("Mayo");
-  c_mayo.setVisible(true);
+  //sourdough = new GCheckbox(gui_window, 75, 400, 90, 20);
+  //sourdough.setText("Sourdough");
+  //sourdough.setVisible(false);
 
-  c_mustard = new GCheckbox(sauce_window, 275, 150, 90, 40);
-  c_mustard.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
-  c_mustard.setText("Mustard");
-  c_mustard.setVisible(true);
+  //gluten_free = new GCheckbox(gui_window, 125, 400, 90, 20);
+  //gluten_free.setText("Gluten-Free");
+  //gluten_free.setVisible(false);
 
-  c_peanut_butter = new GCheckbox(sauce_window, 25, 225, 90, 40);
-  c_peanut_butter.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
-  c_peanut_butter.setText("Peanut Butter");
-  c_peanut_butter.setVisible(true);
 
-  c_relish = new GCheckbox(sauce_window, 150, 225, 90, 40);
-  c_relish.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
-  c_relish.setText("Relish");
-  c_relish.setVisible(true);
-
-  c_tahini = new GCheckbox(sauce_window, 275, 225, 90, 40);
-  c_tahini.setText("Tahini");
-  c_tahini.setVisible(true);
-
-  c_vinaigrette = new GCheckbox(sauce_window, 25, 300, 90, 40);
-  c_vinaigrette.setText("Vinaigrette");
-  c_vinaigrette.setVisible(true);
   //  Arrays
 
   breadOpts = new GCheckbox[]{c_white, c_whole_wheat, c_multigrain, c_rye, c_sourdough, c_gluten_free};
@@ -348,9 +304,9 @@ public void createGUI2() {
   vegOpts = new GCheckbox[]{c_tomato, c_lettuce, c_onion, c_peppers, c_pickles, c_cucumbers, c_olives, c_sprouts, c_avocado};
   cheeseOpts = new GCheckbox[] {c_cheddar, c_mozzarella, c_cream_cheese, c_swiss, c_havarti, c_monterey_jack};
   sauceOpts = new GCheckbox[] {c_mayo, c_ketchup, c_mustard, c_relish, c_vinaigrette, c_honey_mustard, c_bbq, c_garlic_mayo, c_peanut_butter, c_tahini};
-  allOpts = new GCheckbox[][] {breadOpts, meatOpts, vegOpts, cheeseOpts, sauceOpts};
 
-
+  allCheckOpts = new GCheckbox[][]{breadOpts, meatOpts, vegOpts, cheeseOpts, sauceOpts};
+  
   gui_window.loop();
 }
 
