@@ -1,2 +1,2 @@
-# Sandwich-Generator
+# Sandwichify
 A processing project
