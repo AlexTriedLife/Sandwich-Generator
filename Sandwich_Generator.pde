@@ -9,10 +9,6 @@ public JSONArray jMeats = new JSONArray();
 public JSONArray jCheeses = new JSONArray();
 public JSONArray jSauces = new JSONArray();
 
-// Images
-// Bread
-//public PImage i_white, i_whole_wheat, i_rye, i_sourdough, i_multigrain, i_gluten_free ;
-
 Sandwich sandwich;
 
 void setup() {
@@ -23,16 +19,14 @@ void setup() {
   jMeats = jNutritionalInfo.getJSONArray("meats");
   jCheeses = jNutritionalInfo.getJSONArray("cheeses");
   jSauces = jNutritionalInfo.getJSONArray("sauces");
-
-  createGUI2();
-
+ 
   sandwich = new Sandwich();
+  createGUI2();
 
   size(800, 800);
 }
 
 void draw() {
   background(255);
-   //display methood not working yet
   sandwich.displaySandwich();
 }

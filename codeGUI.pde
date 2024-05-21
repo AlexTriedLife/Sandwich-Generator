@@ -22,7 +22,6 @@ GCheckbox[] meatOpts;
 GCheckbox[] vegOpts;
 GCheckbox[] cheeseOpts;
 GCheckbox[] sauceOpts;
-GCheckbox[][] allOpts;
 //  GUI methods
 
 synchronized public void gui_window_draw(PApplet appc, GWinData data) {

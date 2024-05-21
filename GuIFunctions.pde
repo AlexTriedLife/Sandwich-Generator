@@ -29,87 +29,61 @@ void makeOptionVisible(String option) {
   }
 }
 public void checkbox_click(GCheckbox source, GEvent event) {
-    String option = "";
-    String optionType = source.getText().toLowerCase();
+  String option = "";
+  String optionType = source.getText().toLowerCase();
 
-    if (bread_window.isVisible()) {
-        option = "bread";
-    } else if (meat_window.isVisible()) {
-        option = "meat";
-    } else if (veg_window.isVisible()) {
-        option = "veggie";
-    } else if (cheese_window.isVisible()) {
-        option = "cheese";
-    } else if (sauce_window.isVisible()) {
-        option = "sauce";
-    } else {
-        return;
-    }
+  if (bread_window.isVisible()) {
+    option = "bread";
+  } else if (meat_window.isVisible()) {
+    option = "meat";
+  } else if (veg_window.isVisible()) {
+    option = "veggie";
+  } else if (cheese_window.isVisible()) {
+    option = "cheese";
+  } else if (sauce_window.isVisible()) {
+    option = "sauce";
+  }
+  
+  Ingredient ingredient = new Ingredient(option, optionType);
+  if (source.isSelected()) {
+    print("add");
 
-    Ingredient ingredient = new Ingredient(option, optionType);
-    if (source.isSelected()) {
-        // You can only choose one bread type
-        if (option.equals("bread")) {
-            // Deselect all bread checkboxes
-            for (GCheckbox checkbox : breadOpts) {
-                checkbox.setSelected(false);
-            }
-
-            // Remove bread ingredients
-            for (int i = 0; i < sandwich.ingredients.size(); i++) {
-                if (sandwich.ingredients.get(i).type.equals("bread")) {
-                    sandwich.removeIngredient(sandwich.ingredients.get(i));
-                    // Decrement so the sandwich.ingredients.size() is correct 
-                    // As we are still in the for loop
-                    i--; 
-                }
-            }
-            // Select the new bread option and add it to the sandwich
-            source.setSelected(true);
-            sandwich.addIngredient(ingredient);
-        } else {
-            // For other options, just add the ingredient
-            sandwich.addIngredient(ingredient);
-        }
-    } else {
-        // Remove the ingredient if deselected
-        sandwich.removeIngredient(ingredient);
-    }
-
-    // Recalculate sandwich values after any change
-    sandwich.calculateSandwichValues();
-    println(sandwich); // Print the updated sandwich details
-    
-    sandwich.displaySandwich();
-    
+    sandwich.addIngredient(ingredient);
+  } 
+  else {
+    print("remove");
+    sandwich.removeIngredient(ingredient);
+  }
+  
+   sandwich.displaySandwich();
 }
 
 void initButtons() {
   //Button init
-  b_bread = new GButton(gui_window, 0, 270, 60, 20);
+  b_bread = new GButton(gui_window, 0, 75, 70, 80);
   b_bread.setText("Bread");
   b_bread.setOpaque(true);
 
   b_bread.addEventHandler(this, "b_bread_click");
 
-  b_meat = new GButton(gui_window, 75, 270, 60, 20);
+  b_meat = new GButton(gui_window, 75, 75, 70, 80);
   b_meat.setText("Meat");
   b_meat.setOpaque(true);
   b_meat.addEventHandler(this, "b_meat_click");
 
 
-  b_veg = new GButton(gui_window, 150, 270, 60, 20);
+  b_veg = new GButton(gui_window, 150, 75, 70, 80);
   b_veg.setText("Veggie");
   b_veg.setOpaque(true);
   b_veg.addEventHandler(this, "b_veg_click");
 
-  b_cheese = new GButton(gui_window, 225, 270, 60, 20);
+  b_cheese = new GButton(gui_window, 225, 75, 70, 80);
   b_cheese.setText("Cheese");
   b_cheese.setOpaque(true);
 
   b_cheese.addEventHandler(this, "b_cheese_click");
 
-  b_sauce = new GButton(gui_window, 300, 270, 60, 20);
+  b_sauce = new GButton(gui_window, 300, 75, 70, 80);
   b_sauce.setText("Sauce");
   b_sauce.setOpaque(true);
   b_sauce.addEventHandler(this, "b_sauce_click");
@@ -198,7 +172,7 @@ void initCheckboxes() {
 
   c_cucumbers = new GCheckbox(veg_window, 150, 75, 90, 40);
   c_cucumbers.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
-  c_cucumbers.setText("Cucumber");
+  c_cucumbers.setText("Cucumbers");
   c_cucumbers.setVisible(true);
 
 
@@ -322,7 +296,6 @@ void initCheckboxes() {
   vegOpts = new GCheckbox[]{c_tomato, c_lettuce, c_onion, c_peppers, c_pickles, c_cucumbers, c_olives, c_sprouts, c_avocado};
   cheeseOpts = new GCheckbox[] {c_cheddar, c_mozzarella, c_cream_cheese, c_swiss, c_havarti, c_monterey_jack};
   sauceOpts = new GCheckbox[] {c_mayo, c_ketchup, c_mustard, c_relish, c_vinaigrette, c_honey_mustard, c_bbq, c_garlic_mayo, c_peanut_butter, c_tahini};
-  allOpts = new GCheckbox[][] {breadOpts, meatOpts, vegOpts, cheeseOpts, sauceOpts};
 
 
   // Initialize checkbox eventhandlers
@@ -346,19 +319,19 @@ void initCheckboxes() {
 
 void initWindows() {
   // Windows
-  gui_window = GWindow.getWindow(this, "GUI Window", 0, 0, 600, 600, JAVA2D);
+  gui_window = GWindow.getWindow(this, "GUI Window", 0, 0, 370, 250, JAVA2D);
   gui_window.setActionOnClose(G4P.KEEP_OPEN);
   gui_window.addDrawHandler(this, "gui_window_draw");
 
-  bread_window = GWindow.getWindow(this, "Bread", 0, 700, 450, 300, JAVA2D);
+  bread_window = GWindow.getWindow(this, "Bread", 0, 300, 450, 300, JAVA2D);
   bread_window.setActionOnClose(G4P.CLOSE);
   bread_window.setVisible(false);
 
-  meat_window = GWindow.getWindow(this, "Meat", 0, 700, 450, 300, JAVA2D);
+  meat_window = GWindow.getWindow(this, "Meat", 0, 300, 450, 300, JAVA2D);
   meat_window.setActionOnClose(G4P.CLOSE);
   meat_window.setVisible(false);
 
-  veg_window = GWindow.getWindow(this, "Veg", 0, 700, 450, 300, JAVA2D);
+  veg_window = GWindow.getWindow(this, "Veg", 0, 300, 450, 300, JAVA2D);
   veg_window.setActionOnClose(G4P.CLOSE);
   veg_window.setVisible(false);
 
