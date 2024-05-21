@@ -1,6 +1,6 @@
 import g4p_controls.*;
 
-public boolean debugmsg = true;
+public boolean debugmsg = false;
 //  j insignifies json
 public JSONObject jNutritionalInfo;
 public JSONArray jBreads = new JSONArray();
@@ -9,8 +9,11 @@ public JSONArray jMeats = new JSONArray();
 public JSONArray jCheeses = new JSONArray();
 public JSONArray jSauces = new JSONArray();
 
-Ingredient salami;
+// Images 
+// Bread
+public PImage i_white, i_whole_wheat, i_rye, i_sourdough, i_multigrain, i_gluten_free ;
 
+Sandwich sandwich;
 
 void setup() {
   // Init JSONObject
@@ -20,17 +23,18 @@ void setup() {
   jMeats = jNutritionalInfo.getJSONArray("meats");
   jCheeses = jNutritionalInfo.getJSONArray("cheeses");
   jSauces = jNutritionalInfo.getJSONArray("sauces");
-  salami = new Ingredient("meat", "salami");
-  println(salami.numCholesterol);
+  
+  // Init images
+  
+  sandwich = new Sandwich();
 
   size(800, 800);
-  //createGUI();
   createGUI2();
-  print(breadOpts.length);
+
 }
 
 void draw() {
   textSize(100);
   fill(255);
-  text("Sandwich Here",100,200);
+  text("Sandwich Here", 100, 200);
 }

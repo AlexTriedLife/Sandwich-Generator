@@ -1,19 +1,20 @@
 // Import the set class from java
-import java.util.Set; 
+import java.util.Set;
 
 class Ingredient {
   // The type of the ingredient i.e lettuce, ham, cheddar and amount of
   public String type, servingSize;
-
+  public PImage ingredientImage;
   //  nutritional information
   float numCal, numProtein, numSodium, numFat, numCholesterol, numCarb, price;
 
-  // Paramaters are t = ingredient type i.e bread and o = ingredient option i.e multigrain 
+  // Paramaters are: t = ingredient type i.e bread and o = ingredient option i.e multigrain
   Ingredient(String t, String o) {
     this.type = t;
-    this.getNutritionalInfo(t,o);
+    this.getNutritionalInfo(t, o);
+    setImage(o);
   }
-   //  Extract the nutritional info of the ingredient type
+  //  Extract the nutritional info of the ingredient type
   void getNutritionalInfo(String ingredient, String ingredientType) {
     // To be set to the array coresponding with the ingredientType
     JSONArray nutrition_info = null;
@@ -21,7 +22,7 @@ class Ingredient {
     if (ingredient.equals("bread")) {
       // Assign nutrion_info to the jBreads JSONArray
       nutrition_info = jBreads;
-    } else if (ingredient.equals("veggies")) {
+    } else if (ingredient.equals("veggie")) {
 
       nutrition_info = jVeggies;
     } else if (ingredient.equals("meat")) {
@@ -36,9 +37,9 @@ class Ingredient {
     } else {
 
       println("Error: " + ingredient + ": is not an ingredient type");
-      // Exits the method
+      // Exit
       return;
-  }
+    }
 
 
     // Search for the ingredientType in the JSONArray
@@ -46,9 +47,9 @@ class Ingredient {
     for (int i = 0; i < nutrition_info.size(); i++) {
       // Get the JSONObject at i.
       JSONObject jIngredient = nutrition_info.getJSONObject(i);
-      // To check strings use the keys from the JSONObject 
+      // To check strings use the keys from the JSONObject
       Set<String> typeString = jIngredient.keys();
-    
+
       if (typeString.contains(ingredientType)) {
         // get the JSONObject of the parameter ingredientType
         JSONObject jIngredientType = jIngredient.getJSONObject(ingredientType);
@@ -64,6 +65,40 @@ class Ingredient {
       } else {
         println("Error! Ingredient " + ingredientType + " does not exist");
       }
+    }
+  }
+
+  void setImage(String option) {
+    // To lower case to prevent case errors
+    switch (option.toLowerCase()) {
+    case "white":
+      ingredientImage = i_white;
+      break;
+    case "whole_wheat":
+      i_whole_wheat = loadImage("whole-wheat.png");
+      ingredientImage = i_whole_wheat;
+      break;
+    case "multigrain":
+      ingredientImage = i_multigrain;
+      break;
+    case "rye":
+      ingredientImage = i_rye;
+      break;
+    case "sourdough":
+      ingredientImage = i_sourdough;
+      break;
+
+      case "gluten_free":
+      ingredientImage = i_gluten_free;
+      break;
+
+    default:
+      ingredientImage = loadImage("null-image.png");
+      if(debugmsg == true)  
+      {
+        println("Image is null");
+      }
+      break;
     }
   }
 }

@@ -9,7 +9,7 @@
                 "fat": 2.2,
                 "protein": 1.5,
                 "sodium": 0.144,
-                "price": 7
+                "price": 0.5
             },
             "multigrain": {
                 "amount": "per one slice",
@@ -19,7 +19,7 @@
                 "fat": 1.1,
                 "protein": 3.5,
                 "sodium": 0.099,
-                "price": 7
+                "price": 0.55
             },
             "rye": {
                 "amount": "per one slice",
@@ -29,7 +29,7 @@
                 "fat": 1.1,
                 "protein": 0.193,
                 "sodium": 2.7,
-                "price": 7
+                "price": 0.65
             },
             "sourdough": {
                 "amount": "per one slice",
@@ -39,7 +39,7 @@
                 "fat": 1.5,
                 "protein": 6.9,
                 "sodium": 0.385,
-                "price": 7
+                "price": 0.5
             },
             "white": {
                 "amount": "per one slice",
@@ -49,7 +49,7 @@
                 "fat": 1.0,
                 "protein": 2.6,
                 "sodium": 0.142,
-                "price": 7
+                "price": 0.7
             },
             "whole-wheat": {
                 "amount": "per one slice",
@@ -59,7 +59,7 @@
                 "fat": 1.1,
                 "protein": 3.5,
                 "sodium": 0.099,
-                "price": 7
+                "price": 0.5
             }
         }
     ],
@@ -73,7 +73,7 @@
                 "fat": 0.0,
                 "protein": 5,
                 "sodium": 6,
-                "price": 7
+                "price": 0.8
             },
             "cucumbers": {
                 "amount": "four slices",
@@ -83,7 +83,7 @@
                 "fat": 0.04,
                 "protein": 0.16,
                 "sodium": 0.0,
-                "price": 7
+                "price": 0.6
             },
             "lettuce": {
                 "amount": "five leaves",
@@ -93,7 +93,7 @@
                 "fat": 0.0,
                 "protein": 0.5,
                 "sodium": 0.0065,
-                "price": 7
+                "price": 0.4
             },
             "olives": {
                 "amount": "three olives",
@@ -103,7 +103,7 @@
                 "fat": 2.0,
                 "protein": 0,
                 "sodium": 0.187,
-                "price": 7
+                "price": 0.4
             },
             "onion": {
                 "amount": "one slice",
@@ -113,7 +113,7 @@
                 "fat": 0.0,
                 "protein": 0.08,
                 "sodium": 0.0,
-                "price": 7
+                "price": 0.3
             },
             "peppers": {
                 "amount": "one slice",
@@ -123,7 +123,7 @@
                 "fat": 0.03,
                 "protein": 0.1,
                 "sodium": 0.0,
-                "price": 7
+                "price": 0.5
             },
             "pickles": {
                 "amount": "four slices",
@@ -133,7 +133,7 @@
                 "fat": 0.04,
                 "protein": 0.16,
                 "sodium": 0.308,
-                "price": 7
+                "price": 0.6
             },
             "sprouts": {
                 "amount": "half cup",
@@ -143,7 +143,7 @@
                 "fat": 0.09,
                 "protein": 1.58,
                 "sodium": 0.003,
-                "price": 7
+                "price": 0.8
             },
             "tomato": {
                 "amount": "one slice",
@@ -153,7 +153,7 @@
                 "fat": 0.0,
                 "protein": 0.2,
                 "sodium": 0.001,
-                "price": 7
+                "price": 0.5
             }
         }
     ],
@@ -167,7 +167,7 @@
                 "fat": 3.0,
                 "protein": 3.0,
                 "sodium": 137.0,
-                "price": 7
+                "price": 1.05
             },
             "balogna": {
                 "amount": "one slice",
@@ -177,7 +177,7 @@
                 "fat": 11.0,
                 "protein": 5.0,
                 "sodium": 0.450,
-                "price": 7
+                "price": 1.08
             },
             "chicken": {
                 "amount": "one slice",
@@ -187,7 +187,7 @@
                 "fat": 3.6,
                 "protein": 31.0,
                 "sodium": 0.980,
-                "price": 7
+                "price": 1.10
             },
             "ham": {
                 "amount": "one slice",
@@ -197,7 +197,7 @@
                 "fat": 6.0,
                 "protein": 21.0,
                 "sodium": 1.203,
-                "price": 7
+                "price": 1.15
             },
             "roast-beef": {
                 "amount": "one slice",
@@ -207,7 +207,7 @@
                 "fat": 4.0,
                 "protein": 24.0,
                 "sodium": 0.650,
-                "price": 7
+                "price": 1.05
             },
             "salami": {
                 "amount": "one slice",
@@ -217,7 +217,7 @@
                 "fat": 14.0,
                 "protein": 6.0,
                 "sodium": 0.600,
-                "price": 7
+                "price": 1.15
             },
             "tuna": {
                 "amount": "one slice",
@@ -227,7 +227,7 @@
                 "fat": 14.0,
                 "protein": 7.0,
                 "sodium": 200.0,
-                "price": 7
+                "price": 0.81
             },
             "turkey": {
                 "amount": "one slice",
@@ -237,7 +237,7 @@
                 "fat": 7.0,
                 "protein": 29.0,
                 "sodium": 0.103,
-                "price": 7
+                "price": 1.00
             }
         }
     ],
@@ -245,63 +245,63 @@
         {
             "cheddar": {
                 "amount": "one slice",
-                "calories": 113.0,
-                "carbohydrates": 0.9,
-                "cholesterol": 0.028,
-                "fat": 9.3,
-                "protein": 6.4,
-                "sodium": 0.183,
-                "price": 7
+                "calories": 1,
+                "carbohydrates": 2,
+                "cholesterol": 3,
+                "fat": 4,
+                "protein": 5,
+                "sodium": 6,
+                "price": 1.00
             },
             "mozzarella": {
                 "amount": "one slice",
-                "calories": 85.0,
-                "carbohydrates": 0.6,
-                "cholesterol": 0.022,
-                "fat": 6.3,
-                "protein": 6.3,
-                "sodium": 0.178,
-                "price": 7
+                "calories": 1,
+                "carbohydrates": 2,
+                "cholesterol": 3,
+                "fat": 4,
+                "protein": 5,
+                "sodium": 6,
+                "price": 1.10
             },
             "cream-cheese": {
-                "amount": "two tablespoons",
-                "calories": 102.0,
-                "carbohydrates": 1.6,
-                "cholesterol": 0.029,
-                "fat": 10.0,
-                "protein": 1.8,
-                "sodium": 0.091,
-                "price": 7
+                "amount": "one slice",
+                "calories": 1,
+                "carbohydrates": 2,
+                "cholesterol": 3,
+                "fat": 4,
+                "protein": 5,
+                "sodium": 6,
+                "price": 0.90
             },
             "swiss": {
                 "amount": "one slice",
-                "calories": 110.0,
-                "carbohydrates": 0.4,
-                "cholesterol": 0.026,
-                "fat": 8.7,
-                "protein": 7.6,
-                "sodium": 0.052,
-                "price": 7
+                "calories": 1,
+                "carbohydrates": 2,
+                "cholesterol": 3,
+                "fat": 4,
+                "protein": 5,
+                "sodium": 6,
+                "price": 1.10
             },
             "havarti": {
                 "amount": "one slice",
-                "calories": 105.0,
-                "carbohydrates": 0.8,
-                "cholesterol": 0.027,
-                "fat": 8.4,
-                "protein": 6.6,
-                "sodium": 0.159,
-                "price": 7
+                "calories": 1,
+                "carbohydrates": 2,
+                "cholesterol": 3,
+                "fat": 4,
+                "protein": 5,
+                "sodium": 6,
+                "price": 1.18
             },
             "montery-jack": {
                 "amount": "one slice",
-                "calories": 106,
-                "carbohydrates": 0.4,
-                "cholesterol": 0.025,
-                "fat": 8.6,
-                "protein": 6.9,
-                "sodium": 0.152,
-                "price": 7
+                "calories": 1,
+                "carbohydrates": 2,
+                "cholesterol": 3,
+                "fat": 4,
+                "protein": 5,
+                "sodium": 6,
+                "price": 1.15
             }
         }
     ],
@@ -315,7 +315,7 @@
                 "fat": 0.2,
                 "protein": 0.2,
                 "sodium": 0.553,
-                "price": 7
+                "price": 0.40
             },
             "garlic-mayo": {
                 "amount": "one tablespoon",
@@ -325,7 +325,7 @@
                 "fat": 10.0,
                 "protein": 0.5,
                 "sodium": 0.106,
-                "price": 7
+                "price": 0.50
             },
             "honey-mustard": {
                 "amount": "one tablespoon",
@@ -335,7 +335,7 @@
                 "fat": 3.5,
                 "protein": 0.6,
                 "sodium": 0.196,
-                "price": 7
+                "price": 0.60
             },
             "ketchup": {
                 "amount": "one tablespoon",
@@ -345,7 +345,7 @@
                 "fat": 0.1,
                 "protein": 0.4,
                 "sodium": 0.167,
-                "price": 7
+                "price": 0.50
             },
             "mayo": {
                 "amount": "one tablespoon",
@@ -355,7 +355,7 @@
                 "fat": 10.0,
                 "protein": 0.4,
                 "sodium": 0.86,
-                "price": 7
+                "price": 0.60
             },
             "mustard": {
                 "amount": "one tablespoon",
@@ -365,7 +365,7 @@
                 "fat": 0.2,
                 "protein": 0.9,
                 "sodium": 0.120,
-                "price": 7
+                "price": 0.60
             },
             "peanut-butter": {
                 "amount": "one tablespoon",
@@ -375,7 +375,7 @@
                 "fat": 8.0,
                 "protein": 4.0,
                 "sodium": 0.75,
-                "price": 7
+                "price": 1.00
             },
             "relish": {
                 "amount": "one tablespoon",
@@ -385,7 +385,7 @@
                 "fat": 0.1,
                 "protein": 0.2,
                 "sodium": 0.260,
-                "price": 7
+                "price": 0.80
             },
             "tahini": {
                 "amount": "one tablespoon",
@@ -395,7 +395,7 @@
                 "fat": 8.0,
                 "protein": 2.6,
                 "sodium": 0.48,
-                "price": 7
+                "price": 0.90
             },
             "vinaigrette": {
                 "amount": "one tablespoon",
@@ -405,7 +405,7 @@
                 "fat": 4.6,
                 "protein": 0.0,
                 "sodium": 0.254,
-                "price": 7
+                "price": 0.95
             }
         }
     ]
