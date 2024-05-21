@@ -12,7 +12,6 @@ class Ingredient {
   Ingredient(String t, String o) {
     this.type = t;
     this.getNutritionalInfo(t, o);
-    setImage(o);
   }
   //  Extract the nutritional info of the ingredient type
   void getNutritionalInfo(String ingredient, String ingredientType) {
@@ -68,37 +67,37 @@ class Ingredient {
     }
   }
 
-  void setImage(String option) {
-    // To lower case to prevent case errors
-    switch (option.toLowerCase()) {
-    case "white":
-      ingredientImage = i_white;
-      break;
-    case "whole_wheat":
-      i_whole_wheat = loadImage("whole-wheat.png");
-      ingredientImage = i_whole_wheat;
-      break;
-    case "multigrain":
-      ingredientImage = i_multigrain;
-      break;
-    case "rye":
-      ingredientImage = i_rye;
-      break;
-    case "sourdough":
-      ingredientImage = i_sourdough;
-      break;
+  //void setImage(String option) {
+  //  // To lower case to prevent case errors
+  //  switch (option.toLowerCase()) {
+  //  case "white":
+  //    ingredientImage = i_white;
+  //    break;
+  //  case "whole_wheat":
+  //    i_whole_wheat = loadImage("whole-wheat.png");
+  //    ingredientImage = i_whole_wheat;
+  //    break;
+  //  case "multigrain":
+  //    ingredientImage = i_multigrain;
+  //    break;
+  //  case "rye":
+  //    ingredientImage = i_rye;
+  //    break;
+  //  case "sourdough":
+  //    ingredientImage = i_sourdough;
+  //    break;
 
-      case "gluten_free":
-      ingredientImage = i_gluten_free;
-      break;
+  //    case "gluten_free":
+  //    ingredientImage = i_gluten_free;
+  //    break;
 
-    default:
-      ingredientImage = loadImage("null-image.png");
-      if(debugmsg == true)  
-      {
-        println("Image is null");
-      }
-      break;
-    }
-  }
+  //  default:
+  //    ingredientImage = loadImage("null-image.png");
+  //    if(debugmsg == true)  
+  //    {
+  //      println("Image is null");
+  //    }
+  //    break;
+  //  }
+  //}
 }

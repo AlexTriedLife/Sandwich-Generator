@@ -47,13 +47,17 @@ class Sandwich {
     }
   }
   void displaySandwich() {
-    float x = 100;
-    float y = 100;
-    float spacing = 10;
-
-    for (Ingredient ingredient : sandwich.ingredients) {
-      image(ingredient.ingredientImage, x, y);
-      y += ingredient.ingredientImage.height + spacing;
-    }
+    fill(0);
+    textSize(24);
+    text("total number of calories: " + totalCal, width/1.5, 150);
+    textAlign(RIGHT);
+    text("total number of carbohydrates: " + totalCarb, width/1.5, 200);
+    textAlign(RIGHT);
+    text("total number of cholestrol: " + totalCal, width/1.5, y);
+    textAlign(RIGHT);
+    text("total number of calories: " + totalCal, width/1.5, y);
+    textAlign(RIGHT);
+    y += spacing;
   }
+}
 }

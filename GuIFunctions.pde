@@ -29,7 +29,7 @@ void makeOptionVisible(String option) {
   }
 }
 public void checkbox_click(GCheckbox source, GEvent event) {
-    String option = null;
+    String option = "";
     String optionType = source.getText().toLowerCase();
 
     if (bread_window.isVisible()) {
@@ -79,7 +79,9 @@ public void checkbox_click(GCheckbox source, GEvent event) {
     // Recalculate sandwich values after any change
     sandwich.calculateSandwichValues();
     println(sandwich); // Print the updated sandwich details
+    
     sandwich.displaySandwich();
+    
 }
 
 void initButtons() {
